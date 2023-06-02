@@ -25,12 +25,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
 
-      - name: Terraform Init
-        run: terraform init
-      
+      - name: Cargar variables de entorno
+        run: env $(cat .env | xargs) terraform init
 
       - name: Terraform Plan
-        run: terraform plan 
+        run: env $(cat .env | xargs) terraform plan
         
       - name: Terraform Apply
-        run: terraform apply -auto-approve 
+        run: env $(cat .env | xargs) terraform apply -auto-approve
