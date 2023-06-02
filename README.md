@@ -1,4 +1,4 @@
-#El codigo de Terraform/main.tf esta comentado para que no se ejecute#
+#El codigo de Terraform/variables.tf esta comentado para que no se ejecute#
 
 Infraestructura como Código con Terraform
 
