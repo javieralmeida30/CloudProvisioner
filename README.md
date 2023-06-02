@@ -9,10 +9,13 @@ El repositorio está organizado de la siguiente manera:
 ├── .github
 │   └── workflows
 │       └── pipeline.yml
+
 ├── terraform
 │   ├── main.tf
 │   ├── variables.tf
-│   └── .env
+
+│── .env
+
 └── README.md
 
 
