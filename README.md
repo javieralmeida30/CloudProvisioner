@@ -1,12 +1,11 @@
-#El codigo de Terraform/variables.tf esta comentado para que no se ejecute#
+#The Terraform/variables.tf code is commented out to prevent execution in GitHub Actions#
 
-Infraestructura como Código con Terraform
+Infrastructure as Code with Terraform
 
+This repository contains the infrastructure-as-code (IaC) code used to deploy and manage cloud infrastructure using Terraform. With Terraform, we can describe and version our infrastructure declaratively, allowing us to have precise control over our cloud resources.
 
-Este repositorio contiene el código de infraestructura como código (IaC) utilizado para implementar y administrar la infraestructura en la nube utilizando Terraform. Con Terraform, podemos describir y versionar nuestra infraestructura de manera declarativa, lo que nos permite tener un control preciso sobre nuestros recursos en la nube.
-
-Estructura del Repositorio
-El repositorio está organizado de la siguiente manera:
+Repository Structure
+The repository is organized as follows:
 
 ├── .github
 │   └── workflows
@@ -22,21 +21,26 @@ El repositorio está organizado de la siguiente manera:
 
 
 
-El directorio .github/workflows contiene el archivo pipeline.yml, que define el flujo de trabajo de GitHub Actions utilizado para automatizar el despliegue y la gestión de la infraestructura.
-El directorio terraform contiene los archivos principales de Terraform:
-main.tf: Define los recursos de AWS utilizados, como instancias de EC2, grupos de seguridad, etc.
-variables.tf: Define las variables utilizadas en el código de Terraform, como la región de AWS, el tipo de instancia, etc.
-.env: Archivo de entorno que contiene las variables de configuración sensibles, como las credenciales de AWS.
+The .github/workflows directory contains the pipeline.yml file, which defines the GitHub Actions workflow used to automate the deployment and management of the infrastructure.
 
-Uso
+The terraform directory contains the main Terraform files:
 
-Clona este repositorio en tu máquina local.
+main.tf: Defines the AWS resources used, such as EC2 instances, security groups, etc.
 
-Configura las variables necesarias en el archivo .env según tus credenciales y configuración de AWS.
+variables.tf: Defines the variables used in the Terraform code, such as the AWS region, instance type, etc.
 
-Ejecuta el siguiente comando para inicializar Terraform:
+.env: Environment file that contains sensitive configuration variables, such as AWS credentials.
 
+Usage
 
-Notas Importantes
-Mantén tus credenciales y variables de configuración confidenciales y no las compartas públicamente.
-Antes de realizar cambios importantes, asegúrate de entender el impacto que tendrán en la infraestructura existente y realiza pruebas exhaustivas.
+Clone this repository to your local machine.
+
+Configure the necessary variables in the .env file according to your AWS credentials and configuration.
+
+Run the following command to initialize Terraform:
+
+Important Notes
+
+Keep your credentials and configuration variables confidential and do not publicly share them.
+
+Before making significant changes, make sure you understand the impact they will have on the existing infrastructure and perform thorough testing.
